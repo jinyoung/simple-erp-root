@@ -57,6 +57,14 @@ export default {
                 text: "",
                 link: "/sales/",
             },
+            { 
+                text: "재고",
+                link: "/inventory/inventories",
+            },
+            { 
+                text: "",
+                link: "/inventory/",
+            },
         ],
     }),
     methods: {

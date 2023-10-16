@@ -80,6 +80,29 @@
                     </v-list-item>
 
 
+                    <v-list-item
+                        class="px-2"
+                        key="inventories"
+                        to="//inventories"
+                        @click="changeUrl()"
+                        color="primary"
+                        style="font-weight:700;"
+                    >
+                        재고
+                    </v-list-item>
+
+                    <v-list-item
+                        class="px-2"
+                        key=""
+                        to="//"
+                        @click="changeUrl()"
+                        color="primary"
+                        style="font-weight:700;"
+                    >
+                        
+                    </v-list-item>
+
+
                 </v-list>
             </v-navigation-drawer>
         </div>
@@ -177,6 +200,20 @@ export default {
                 description: '', 
                 key: 'orders', 
                 route: '//orders',
+                ImageUrl: '',
+            },
+            { 
+                title: '', 
+                description: '', 
+                key: '', 
+                route: '//',
+                ImageUrl: '',
+            },
+            { 
+                title: '재고', 
+                description: '재고에 대한 설명', 
+                key: 'inventories', 
+                route: '//inventories',
                 ImageUrl: '',
             },
             { 

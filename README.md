@@ -22,6 +22,7 @@ See the README.md files inside the each microservices directory:
 
 - foundation
 - sales
+- inventory
 
 
 ## Run API Gateway (Spring Gateway)
@@ -39,6 +40,11 @@ mvn spring-boot:run
 - sales
 ```
  http :8088/orders id="id" productId="productId" quantity="quantity" vendorId="vendorId" totalAmount="totalAmount" 
+ http :8088/ 
+```
+- inventory
+```
+ http :8088/inventories name="name" quantity="quantity" 
  http :8088/ 
 ```
 

@@ -1,5 +1,6 @@
 <template>
     <v-app>
+        <Snackbar/>
         <v-app-bar
                 app
                 clipped-left
@@ -10,7 +11,7 @@
             <v-app-bar-nav-icon @click="openSideBar()"></v-app-bar-nav-icon>
 
             <v-toolbar-title class="font-weight-bold text-uppercase">
-                untitled
+                Inventory
             </v-toolbar-title>
 
             <v-icon class="ml-3" @click="$router.push('/')">
@@ -63,7 +64,12 @@
         </v-navigation-drawer>
 
         <v-main>
-            <router-view></router-view>
+            <v-container style="max-width:100vw !important;" 
+                    class="py-8 px-6 mt-10" 
+                    fluid
+            >
+                <router-view></router-view>
+            </v-container>
         </v-main>
     </v-app>
 </template>
@@ -75,38 +81,6 @@
             username: "",
             sideBar: true,
             menus: [
-                {
-                    id: 'foundation',
-                    title: 'Foundation',
-                    items: [
-                        {
-                            key: 'products',
-                            url: '/foundation/products',
-                            name: '제품'
-                        },
-                        {
-                            key: '',
-                            url: '/foundation/',
-                            name: ''
-                        },
-                    ]
-                },
-                {
-                    id: 'sales',
-                    title: 'Sales',
-                    items: [
-                        {
-                            key: 'orders',
-                            url: '/sales/orders',
-                            name: '주문'
-                        },
-                        {
-                            key: '',
-                            url: '/sales/',
-                            name: ''
-                        },
-                    ]
-                },
                 {
                     id: 'inventory',
                     title: 'Inventory',
@@ -140,7 +114,7 @@
                     location.href = 'http://localhost:9090/realms/master/protocol/openid-connect/logout'
                 }
             },
-        }
+        },
     };
 </script>
 

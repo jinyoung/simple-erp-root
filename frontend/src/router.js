@@ -15,6 +15,11 @@ import OrderDetail from "./components/listers/OrderDetail"
 import Manager from "./components/listers/Cards"
 import Detail from "./components/listers/Detail"
 
+import InventoryManager from "./components/listers/InventoryCards"
+import InventoryDetail from "./components/listers/InventoryDetail"
+import Manager from "./components/listers/Cards"
+import Detail from "./components/listers/Detail"
+
 
 export default new Router({
     // mode: 'history',
@@ -50,6 +55,27 @@ export default new Router({
                 path: '//orders/:id',
                 name: 'OrderDetail',
                 component: OrderDetail
+            },
+            {
+                path: '//',
+                name: 'Manager',
+                component: Manager
+            },
+            {
+                path: '///:id',
+                name: 'Detail',
+                component: Detail
+            },
+
+            {
+                path: '//inventories',
+                name: 'InventoryManager',
+                component: InventoryManager
+            },
+            {
+                path: '//inventories/:id',
+                name: 'InventoryDetail',
+                component: InventoryDetail
             },
             {
                 path: '//',

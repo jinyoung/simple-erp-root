@@ -16,6 +16,9 @@ const routes = constructRoutes(`
   <route path="sales">
     <application name="@my-app/sales"></application>
   </route>
+  <route path="inventory">
+    <application name="@my-app/inventory"></application>
+  </route>
 </single-spa-router>
 `);
 
